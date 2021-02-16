@@ -13,50 +13,56 @@ con el plug inn live Server(clic derecho - Open with Live Server)-->
 <body>
   <!--EL header alberga la navegación del contenido de la página-->
   <header>
-    <p>
-      <a href="#setup">Setup</a>
-    </p>
     <nav>
-      <!--Para este ejemplo se representa una lista ol (ordered list)-->
-      <ol>
-        <li>
-          <!--a href para enlaces y a cada parte a enlazar se le agregara un id-->
-          <a href="#google-chrome">
-            Google Chrome</a>
-        </li>
-        <li>
-          <a href="#vsc">Visual Studio Code</a>
-        </li>
-        <li>
-          <a href="#figma">Figma</a>
-        </li>
-        <li>
-          <a href="#github">GitHub</a>
-        </li>
-      </ol>
-      <p>
-        <a href="#conceptos">Conceptos esenciales del Desarrollo Web</a>
-      </p>
-      <ol>
-        <li>
-          <a href="#html">Qué es HTML</a>
-        </li>
-        <li>
-          <a href="#etiqueta">Etiquetas</a>
-        </li>
-        <li>
-          <a href="#dom">DOM</a>
-        </li>
-        <li>
-          <a href="#sem">Semántica</a>
-        </li>
-        <li>
-          <a href="#atri">Atributos</a>
-        </li>
-        <li>
-          <a href="#css">Qué es CSS</a>
-        </li>
-      </ol>
+      <!--Con las etiquetas <details><summary></summary> </details> se creará un menú despleglable-->
+      <details>
+        <!--Con el atributo open en details el menú estará abierto por defecto-->
+        <summary>
+          Setup
+        </summary>
+        <!--Para este ejemplo se representa una lista ol (ordered list)-->
+        <ol>
+          <li>
+            <!--a href para enlaces y a cada parte a enlazar se le agregara un id-->
+            <a href="#google-chrome">
+              Google Chrome</a>
+          </li>
+          <li>
+            <a href="#vsc">Visual Studio Code</a>
+          </li>
+          <li>
+            <a href="#figma">Figma</a>
+          </li>
+          <li>
+            <a href="#github">GitHub</a>
+          </li>
+        </ol>
+      </details>
+      <details>
+        <summary>
+          Conceptos esenciales del Desarrollo Web
+        </summary>
+        <ol>
+          <li>
+            <a href="#html">Qué es HTML</a>
+          </li>
+          <li>
+            <a href="#etiqueta">Etiquetas</a>
+          </li>
+          <li>
+            <a href="#dom">DOM</a>
+          </li>
+          <li>
+            <a href="#sem">Semántica</a>
+          </li>
+          <li>
+            <a href="#atri">Atributos</a>
+          </li>
+          <li>
+            <a href="#css">Qué es CSS</a>
+          </li>
+        </ol>
+      </details>
     </nav>
   </header>
   <!--Al abrir el archivo con live server, da una ruta y la ventaja
@@ -209,5 +215,5 @@ al mismo tiempo y es más rápido-->
     <a href="mailto:me@leonidasesteban.com">me@leonidasesteban.com</a>
   </p>
 </body>
-
+<!--Continuar con el video 19 de insertar código-->
 </html>
