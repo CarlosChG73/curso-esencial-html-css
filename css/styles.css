@@ -126,7 +126,8 @@ body {
   si se agrega una a sería agregar el canal alfa
   rgba(0, 0, 0, .)*/
   /* ## Fuentes personalizadas ## */
-  font-family: charter;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: charter; */
 }
 
 a {
@@ -165,6 +166,16 @@ h2 {
 h3 {
   /* font-size: 24px; */
   font-size: 1.5em;
+}
+pre {
+  background: #FEC62E;
+}
+
+.hero {
+  /* background: url('../images/patter.png'); */
+  /* Se creará un degradado de la imágen */
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/patter.png);
+  height: 350px;
 }
 
 
