@@ -178,6 +178,37 @@ pre {
   height: 350px;
 }
 
+/* #### PseudoElemantos #### */
+/* Hay elementos seleccionables y creados a partir de otros
+ elementos como after y before o el placeholder de los inputs
+ de formulario, en esta clase aprenderemos a usarlos. */
+ .section-content {
+   counter-reset: titlelist;
+ }
+.section-content h3{
+   /* se indica que el contador se incremente */
+   counter-increment: titlelist;
+ }
+.section-content h3::before {
+   /* ##se crea el contador## */
+  content: counter(titlelist, decimal);
+   /* content: counter(titlelist, upper-roman); */
+ }
+
+.section-content h3::after {
+    content: '';
+    width: 32px;
+    height: 4px;
+    background: var(--gray30);
+    display: inline-block;
+  }
+
+  /* ::selection {
+    background: green;
+  } */
+  /* #### Counters #### */
+
+
 
 
 
