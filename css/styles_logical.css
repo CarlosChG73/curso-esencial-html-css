@@ -1,0 +1,219 @@
+/* ## Regral para Fuentes personalizadas ## */
+@font-face {
+  /* Primero se le da nombre a la fuente */
+  font-family: charter;
+  /* Se pone la ruta de la fuente */
+  src: url('../fonts/fonts/charter-regular.otf');
+  /* Se le dindica de que estilo de fuente */
+  font-style: normal;
+  /* Se indica el peso de la fuente */
+  font-weight: 400;
+}
+
+@font-face {
+  /* Primero se le da nombre a la fuente */
+  font-family: charter;
+  /* Se pone la ruta de la fuente */
+  src: url('../fonts/fonts/charter-italic.otf');
+  /* Se le dindica de que estilo de fuente */
+  font-style: italic;
+  /* Se indica el peso de la fuente */
+  font-weight: 400;
+}
+
+@font-face {
+  /* Primero se le da nombre a la fuente */
+  font-family: carlos;
+  /* Se pone la ruta de la fuente */
+  src: url('../fonts/fonts/charter-italic.otf');
+  /* Se le dindica de que estilo de fuente */
+  font-style: italic;
+  /* Se indica el peso de la fuente */
+  font-weight: 400;
+}
+
+@font-face {
+  /* Primero se le da nombre a la fuente */
+  font-family: carlos;
+  /* Se pone la ruta de la fuente */
+  src: url('../fonts/fonts/charter-bold-italic.otf');
+  /* Se le dindica de que estilo de fuente */
+  font-style: italic;
+  /* Se indica el peso de la fuente */
+  font-weight: bold;
+}
+
+:root {
+  font-size: 18px;
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
+}
+/* Reglas CSS/ selector{ propiedad: valor;}
+Se puede agregar mas de un selector separado por una , */
+
+/* #### SELECTORES/
+Definen sobre que elementos
+se aplicará un conjunto de reglas CSS #### */
+
+/*######## SELECTORES BÁSICOS ########*/
+
+/* 1.- Global o Universal
+Es con un * este selector afecta a todos los elementos */
+
+/* 2.- Etiqueta <style></style>
+Hace referencia a todos los elementos HTML que coincidan */
+
+/* 3- .Clase / class
+Requiere primero el atributo class que se asigna al
+elemento para darle el nombre de la clase y
+en styles.css se invoca con un . / Se le puede poner
+N clases que se requieran a un mismo elementos en HTML*/
+
+/* 4.- #id / Se puede identificar por el #
+Solo un elemento puede tener un id en una página,
+no pueden existir dos id iguales. */
+
+/* 5.- [atributo]
+(Nota: para sacar los corchetes es con alt + 91)
+Todos los elementos que contengan el atributo o
+el valor de atributo en cuestión */
+
+/* 6.- Grupo
+N selectores se pueden configurar con las mismas
+propiedades. */
+
+/* #### SELECTORES COMBINADOS #### */
+
+/* Descendentes
+Se puede asignat atributos más especificos a
+los elementos */
+
+/* > Hijo directo
+Los hijos directos del selector previo a > */
+
+/* ~ Hermano Los elementos en el mismo nivel */
+
+/* + Adyacente
+Es como el hermano pero solo el más cercano */
+
+/* #### PSEUDO SELECTORES ####
+Son estados que pueden pasar a un elemento*/
+
+/* :PseudoClase es con los :
+Representan estados de un elemento
+El más popular es -  :hover cambia la forma del cursor
+cuando se señala algo*/
+
+/* ::PseudoElementos con ::
+Crean elementos especiales  ejemplo: agregar un
+"-" antes y despues del texto:
+h1::hafter{content: "-"}*/
+
+/* ######## User Agent Styles ########
+     (estilo de agente de usuario) */
+
+/*## COLORES ##*/
+body {
+  /* colores hexadecimales se representan con
+  números del 0 al 16 son 3 grupos de números
+  #000000 / 0 representa a ningún color (negro)
+  en cada grupo de dos números representan los
+  colores primarios, los primeros
+  #00 = R red 00 = G green 00 = B blue */
+  color: var(--gray30);
+  /* otra forma de colores es con rgb(0, 255, 0);
+  si se agrega una a sería agregar el canal alfa
+  rgba(0, 0, 0, .)*/
+  /* ## Fuentes personalizadas ## */
+  font-family: 'Roboto', sans-serif;
+  /* font-family: charter; */
+}
+
+a {
+  color: var(--gray30);
+}
+
+header {
+  /* --gray10: red; */
+  font-size: 14px;
+  color: var(--gray10);
+}
+/* Selector anidado para header a */
+header a {
+  color: var(--gray10);
+  text-decoration: none;
+}
+/* Se le cambia el color a las anclas con :hover dentro de header a */
+header a:hover {
+  color: var(--gray30);
+}
+
+nav details summary {
+  font-weight: bold;
+}
+h1 {
+  /* Para sacar el valor en em se divide la cantidad px entre 16 */
+  font-size: 60px;
+  /* font-size: 1.75em; */
+}
+
+h2 {
+  /* font-size: 32px; */
+  font-size: 2em;
+}
+
+h3 {
+  /* font-size: 24px; */
+  font-size: 1.5em;
+}
+pre {
+  background: #FEC62E;
+}
+
+.hero {
+  /* background: url('../images/patter.png'); */
+  /* Se creará un degradado de la imágen */
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/patter.png);
+  height: 350px;
+}
+
+/* #### PseudoElemantos #### */
+/* Hay elementos seleccionables y creados a partir de otros
+ elementos como after y before o el placeholder de los inputs
+ de formulario, en esta clase aprenderemos a usarlos. */
+ .section-content {
+   counter-reset: titlelist;
+ }
+.section-content h3{
+   /* se indica que el contador se incremente */
+   counter-increment: titlelist;
+ }
+.section-content h3::before {
+   /* ##se crea el contador## */
+  content: counter(titlelist, decimal);
+   /* content: counter(titlelist, upper-roman); */
+ }
+
+.section-content h3::after {
+    content: '';
+    width: 32px;
+    height: 4px;
+    background: var(--gray30);
+    display: inline-block;
+  }
+
+  /* ::selection {
+    background: green;
+  } */
+  /* #### Counters #### */
+
+
+
+
+
+
+
+
+
+
