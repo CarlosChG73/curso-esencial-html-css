@@ -1,0 +1,121 @@
+/* Reglas CSS: selector { propiedad: valor; }
+Si se requiere poner más de un selector,
+se separa por una , - selector1, selector2 {etc}*/
+
+/* Para añadir fuentes personalizadas se ytiliza la
+regla @font-face */
+/* @font-face {
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: bold;
+} */
+
+/* :root tiene peso superior cuando esta de seudoclase */
+:root {
+  font-size: 18px;
+  /* Custom properties o variables en CSS nos ayudarán a
+  almacenar datos para ser reutilizados por referencia en
+  múltiples partes de nuestras hojas de estilo,
+  son modificables según su contexto y también
+  manipulables desde JavaScript  */
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
+}
+
+/* #### COLORES #### */
+body {
+  color: var(--gray30);
+  /* #### Google Fonts #### */
+  font-family: 'Roboto', sans-serif;
+  /* font-family: charter; */
+}
+a {
+  color: var(--gray30);
+}
+header {
+  /* Para modificar el
+  color en un cachito determinado */
+  /* --gray10: red; */
+  font-size: 14px;
+  color: var(--gray10);
+}
+/* selector anidado */
+header a {
+  color: var(--gray10);
+  text-decoration: none;
+}
+header a:hover {
+  color: var(--gray30);
+}
+nav details summary {
+  font-weight: bold;
+}
+h1 {
+  font-size: 60px;
+  /* font-size: 3.75em; */
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+/* #### Backgrounds #### */
+pre {
+  background: #FEC62E;
+}
+.hero {
+  /* background: url('../img/pattern.png'); */
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  /* #### background degradado #### */
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../img/pattern.png');
+  height: 350px;
+}
+/* ### se resetea el contador ### */
+.section-content {
+  counter-reset: titelist;
+}
+/* #### Counters #### */
+.section-content h3 {
+  counter-increment: titlelist;
+}
+
+/* #### Pseudo Elementos #### */
+.section-content h3::before {
+  /* #### Counters #### */
+  content: counter(titlelist, decimal) '.';
+
+}
+
+.section-content h3::after {
+  content: '';
+  width: 32px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+}
+/* ::selection {
+  background: orange;
+} */
