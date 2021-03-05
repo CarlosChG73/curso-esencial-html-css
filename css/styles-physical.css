@@ -9,7 +9,7 @@ recomendado porque afecta más cosas del modelo de caja. */
   box-sizing: border-box;
 } */
 
-/* Para añadir fuentes personalizadas se ytiliza la
+/* Para añadir fuentes personalizadas se utiliza la
 regla @font-face */
 /* @font-face {
   font-family: charter;
