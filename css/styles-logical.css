@@ -54,9 +54,23 @@ body {
 
   /* ########## Skin del nuevo proyecto ########## */
   background: #251F24;
+
+  /* #### Márgenes - Aplicación de la técnica del
+  wrapper usando max-inline-size */
+  margin: 0;
 }
 a {
   color: var(--white30);
+}
+
+/* #### Posiciones #### */
+.header {
+  position: sticky;
+  inset-block-start: -45px;
+}
+.header-content {
+  position: relative;
+  inset-block-start: 65px;
 }
 header {
   /* Para modificar el
@@ -64,10 +78,23 @@ header {
   /* --white10: red; */
   font-size: 14px;
   color: var(--white);
+
+  /* #### Posiciones #### */
+  position: absolute;
+  /* Top */
+  inset-block-start: 0;
+  /* bottom */
+  /* inset-inline-end: ; */
+  /* left  */
+  inset-inline-start: -208px;
+  /* right  */
+  /* inset-inline-end: ; */
+  inline-size: 188px;
 }
 /* #### Skin del nuevo proyecto #### */
 header li {
   color: var(--white20);
+  margin-block-end: 16px;
 }
 /* selector anidado */
 header a {
@@ -88,16 +115,37 @@ h1, h2, h3 {
 h1 {
   font-size: 60px;
   /* font-size: 3.75em; */
+
+  /* #### Márgenes #### */
+  margin-block-start: 64px;
+  margin-block-end: 16px;
 }
 h2 {
   font-size: 2em;
+  margin-block: 40px;
 }
 h3 {
   font-size: 1.5em;
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+/* #### Márgenes #### */
+hr {
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2);
 }
 /* #### Backgrounds #### */
 pre {
   background: var(--white10);
+
+  /* #### Rellenos #### */
+  padding: 40px;
+  /* border: 1px solid red; */
+  /* ## se genera scroll solo donde se indico
+  con overflow: auto; ## */
+  overflow: auto;
+  border-radius: 8px;
 }
 
 /* #### Skin del nuevo proyecto #### */
@@ -136,16 +184,35 @@ p {
 /* #### Pseudo Elementos #### */
 .section-content h3::before {
   /* #### Counters #### */
-  content: counter(titlelist, decimal) '.';
-
+  content: counter(titlelist, decimal) '. ';
 }
 
-.section-content h3::after {
+/* .section-content h3::after {
   content: '';
   width: 32px;
   height: 4px;
   background: var(--white30);
   display: inline-block;
+} */
+
+/* #### Márgenes #### */
+blockquote {
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background-color: var(--white10);
+  border-radius: 8px;
+
+  /* #### Rellenos #### */
+  line-height: 32px;
+  font-size: 24px;
+  /* padding: 24px; */
+  padding-inline-end: 24px;
+  padding-inline-start: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+}
+blockquote p {
+  color: var(--white30);
 }
 /* ::selection {
   background: orange;
@@ -156,19 +223,24 @@ p {
 
 /* ###### Tamaños / wrapper ###### */
 .main {
+  /* #### Rellenos #### */
+  /* padding: 10px; */
   /* border: 1px solid red; */
 }
 .wrapper {
   /* border: 1px solid yellow; */
   /* inline-size: 902px; */
   max-inline-size: 902px;
-  max-width: 902px;
+  /* max-width: 902px; */
   /* block-size: 100px; */
   /* overflow: auto; */
   margin: auto;
   /* width: ; */
 }
 .main-content {
+  /* #### Rellenos #### */
+  padding-inline: 16px;
+
   /* border: 1px solid blue; */
 }
-/* Sección 6 - Maquetación con propiedades - márgenes */
+
